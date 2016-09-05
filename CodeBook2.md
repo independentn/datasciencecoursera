@@ -55,7 +55,7 @@ There are 5 steps to clean the data
  TO FILTER. THERE ARE SOME COLUMNS WITH (,Mean) BUT IT DOESNT
  SEEM TO GIVE ACTUAL MEAN OR STANDARD DEVIATION.
  HENCE FOR THE PURPOSES OF THIS H/W I WILL ONLY FILTER ON mean AND std.
- 'Features' file is used and following logic applied
+ Features file is used and following logic applied:
     * 1. get key words 'mean' and 'std' from features file
     * 2. get position of 'mean' and 'std' 
     * 3. position in 2. translates to column position in full_data + 2
@@ -65,19 +65,19 @@ There are 5 steps to clean the data
 ### Part 3: the activity numbers were changed to labels using activity file 
         Logic is as follows:
     * 1. read in activities txt
-    *  2. find which numbers correspond to which activity
-    *  3. change the numbers in data_mean_std to activity description
+    * 2. find which numbers correspond to which activity
+    * 3. change the numbers in data_mean_std to activity description
        the activity numbers are at the second to last column in data_mean_std
 
 ### Part 4: The column names are added using the features file and their description was changed to be more user friendly
 This step is very subjective and has a lot of personal judgment.
  In my opinion, the data labels under features are very well described.
- the only thing changed is the following
+ the only thing changed is the following:
      * 1. get rid of the two parenthesis '()'
      * 2. make id to 'test_train'
 
 ### Part 5: Finally for each combination of activity and subjet the average of each mean and standard deviation is computed
-  The aggregate function was used
+  The aggregate function was used:
     * 1. first you put the combination levels which is subject number and activity
     * 2. then you put the numbers you want to summarize these combinations which
       is all the means and std
